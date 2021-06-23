@@ -21,9 +21,13 @@ if ($result->num_rows > 0) {
         }
 
         if (isMobile()) {
+            header("HTTP/1.1 301 Moved Permanently");
             header('Location: ' . $MobileLink);
+            exit();
         } else {
+			header("HTTP/1.1 301 Moved Permanently");
             header('Location: ' . $DesktopLink);
+            exit();
         }
     }
 } else {
