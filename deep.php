@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Generator</title>
+	<link rel="stylesheet" href="../assets/css/main.min.css">
+</head>
+<body>
+
 <?php
 
 if (isset($_GET['IgUsername']) and !empty($_GET['IgUsername'])) {
@@ -21,7 +32,7 @@ if (isset($_GET['IgUsername']) and !empty($_GET['IgUsername'])) {
     if (mysqli_query($link, $sql)) {
 		if ( mysqli_affected_rows($link) > 0 ) {
 			echo "Pridané" . "<br>";
-			echo "Deeplink URL: <a href=". $RootDomain . $hash .">". $RootDomain . $hash . "</a>";
+			echo "Deeplink URL: <div class=\"deeplink-wrapper\"><button class=\"copy\">". $RootDomain . $hash . "</button></div>";
 		} else {
 			echo "IG je už v DB";
 		}
@@ -33,3 +44,10 @@ if (isset($_GET['IgUsername']) and !empty($_GET['IgUsername'])) {
 } else {
     echo 'Daj tam IG username koko';
 }
+?>
+
+<script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

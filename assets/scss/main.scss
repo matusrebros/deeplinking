@@ -1,3 +1,14 @@
+body {
+	min-width: 100vw;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.4em;
+}
+
 table,
 th,
 td {
@@ -5,19 +16,53 @@ td {
 }
 
 td {
-	padding: 8px;
+    padding: 8px;
 }
 
 button.copy {
-	background: none;
-	border: none;
-	cursor: pointer;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .deeplink-wrapper {
-	background: lightblue;
+    background: lightblue;
 
-	&:hover {
-		background: darken(lightblue, 10);
+    &:hover {
+        background: darken(lightblue, 10);
+    }
+}
+
+.generator {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        width: 100%;
+        max-width: 400px;
+        font-size: 1.5em;
+    }
+
+    input[type=submit] {
+        margin-top: 32px;
+        max-width: 200px;
+        cursor: pointer;
+    }
+}
+
+.list-page {
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	table {
+		width: 100%;
+		max-width: 800px;
 	}
 }
