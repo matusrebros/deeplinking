@@ -10,7 +10,7 @@
 
 <body>
 
-	<form method="POST" action="deep.php">
+	<form method="GET" action="../deep.php">
 		<input type="text" name="IgUsername" placeholder="IG username" />
 		<input type="submit" value="Deep It" />
 	</form>
